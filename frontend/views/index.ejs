@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to Nyx Chat</title>
+	<style>
+		* { box-sizing: border-box; }
+
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			color: #edf2ff;
+			background: #111827;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		main {
+			flex: 1;
+			display: grid;
+			place-items: center;
+			padding: 48px 24px;
+			text-align: center;
+			background: radial-gradient(ellipse at top, #283c5c, #111827 70%);
+		}
+
+		.welcome { max-width: 680px; }
+
+		.status {
+			display: inline-block;
+			margin-bottom: 22px;
+			padding: 8px 14px;
+			border: 1px solid #50678c;
+			border-radius: 999px;
+			color: #c4d6f5;
+			font-size: 0.85rem;
+			letter-spacing: 0.04em;
+		}
+
+		h1 {
+			margin: 0 0 18px;
+			font-size: clamp(2.5rem, 8vw, 4.5rem);
+			line-height: 1.1;
+		}
+
+		h1 span { color: #8ab4ff; }
+
+		p {
+			max-width: 540px;
+			margin: 0 auto;
+			color: #bec9da;
+			font-size: 1.1rem;
+			line-height: 1.7;
+		}
+
+		footer {
+			padding: 20px 24px;
+			border-top: 1px solid #29364b;
+			color: #94a0b4;
+			font-size: 0.9rem;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="welcome" aria-labelledby="welcome-heading">
+			<span class="status">Currently in development</span>
+			<h1 id="welcome-heading">Welcome to <span>Nyx Chat</span></h1>
+			<p>We’re happy you’re here! Nyx Chat is a new project currently in progress. We’re building a welcoming place to connect, and we can’t wait to share more with you.</p>
+		</section>
+	</main>
+
+	<footer>&copy; <span id="year">2026</span> Nyx Chat. Thanks for stopping by. Tame ZEED &#10084;&#65039;</footer>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
